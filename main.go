@@ -216,6 +216,12 @@ func addClients(_idProfile int64) {
 			Description: "Description of client 2, on profile: " + strconv.FormatInt(_idProfile, 10),
 			StartDate:   time.Now().Format("2006-01-02"),
 		},
+		Client{
+			idProfile:   _idProfile,
+			Name:        "client 3, on profile " + strconv.FormatInt(_idProfile, 10),
+			Description: "Description of client 3, on profile: " + strconv.FormatInt(_idProfile, 10),
+			StartDate:   time.Now().Format("2006-01-02"),
+		},
 	}
 
 	for i := 0; i < len(clients); i++ {
@@ -242,6 +248,11 @@ func addProfiles() {
 		Profile{
 			Username: "demo@gmail.com",
 			Password: "demo",
+			Is_Admin: "N",
+		},
+		Profile{
+			Username: "demo1@gmail.com",
+			Password: "demo1",
 			Is_Admin: "N",
 		},
 	}
